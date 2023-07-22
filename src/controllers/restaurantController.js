@@ -37,3 +37,17 @@ export const handleAddRestaurant = async (req, res) => {
 		res.send({ success: false, error: error.message });
 	}
 };
+
+export const handleListCities = async (req, res) => {
+	try {
+		 const cities = await Restaurant.distinct("address.city"); // Extract the distinct city values
+			console.log(cities);
+			res.status(200).send({
+				success: true,
+				cities,
+			});
+	} catch (error) {
+		console.log("error listing cities:", error.message);
+		res.send({ success: false, error: error.message });
+	}
+};
