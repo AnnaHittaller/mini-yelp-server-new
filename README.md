@@ -22,7 +22,7 @@ Here are some example outputs from these endpoints:
 
 1. GET `/restaurants/list`
 
-   ```
+```json
 [
   {
     "_id": "64bbaa497496a5d98178fc9b",
@@ -54,11 +54,11 @@ Here are some example outputs from these endpoints:
   },
   //more restaurants
 ]
-   ```
+```
 
 2. GET `/restaurants/listOne/64bbaa497496a5d98178fc9b`
 
-```
+```json
 {
   "_id": "64bbaa497496a5d98178fc9b",
   "name": "Veggie Heaven",
@@ -92,7 +92,7 @@ Here are some example outputs from these endpoints:
 3. POST `/restaurants/add`
    Request body:
 
-```
+```json
 {
 "name": "BBQ Pitmaster's Grill",
 "description": "Savor the smoky goodness of slow-cooked barbecue, featuring tender meats and mouthwatering flavors crafted by expert pitmasters.",
@@ -116,7 +116,7 @@ Here are some example outputs from these endpoints:
 
 4. GET `/restaurants/cities`
 
-```
+```json
 {
   "success": true,
   "cities": [
